@@ -6,5 +6,11 @@ publicDir = path.join(__dirname,'public');
 
 app.use(express.static(publicDir))
 
-app.listen(port);
+app.get('/testing', (req, res) => {
+  res.send('testing')
+})
+
+app.listen(port, () => {
+  console.log('running');
+});
 module.exports = app;
